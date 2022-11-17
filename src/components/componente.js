@@ -1,9 +1,20 @@
-import React, { Component } from "react";
+import React, {Component} from "react"; 
 
-class Componente extends Component{
-    render(){
-        return <h1>Hola soy un componente</h1>
-    }
-}
+// function Componente(props){
+//     return <h2>{props.msg}</h2>;
+// }
 
-export default Component;
+
+
+
+// class Componente extends Component{
+//     render(){
+//         return <h2>{this.props.msg}</h2>
+//     }
+// }
+
+const Componente = props => <h2>{props.msg}</h2>
+
+
+
+export default Componente;

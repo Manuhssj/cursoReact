@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Component from './components/Componente';
 
 function App() {
   let auth =false;
-  let nombre = "manuel";
+  let nombre = "Manuel";
+  let numeros = ['1','2', '3', '4'];
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +22,10 @@ function App() {
         </p>
         {/* End pruebas */}
 
+        {numeros.map((es,index) => (
+          <li key={index}>{es}</li>
+        ))}
+
         
         <a
           className="App-link"
@@ -30,6 +36,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <section>
+        <Component msg="Hola soy un componente funcional expresado desde una prop"/>
+      </section>
     </div>
   );
 }
