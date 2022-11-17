@@ -1,46 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
 import Component from './components/Componente';
+import Propiedades from './components/Propiedades';
 
 function App() {
   let auth =false;
   let nombre = "Manuel";
   let numeros = ['1','2', '3', '4'];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Editar <code>src/App.js</code> and save to reload.
+    <section>
 
-        </p>
-        {/* Pruebas */}
-        <label htmlFor="nombre">Nombre</label>
-        <input type="text" id="nombre" />
-        <p>
-          {auth ? "El usuario: " + nombre +" ha sido logueado" : "No hay una sesion activa"}
-        </p>
-        {/* End pruebas */}
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Editar <code>src/App.js</code> and save to reload.
 
-        {numeros.map((es,index) => (
-          <li key={index}>{es}</li>
-        ))}
+          </p>
+          {/* Pruebas */}
+          <label htmlFor="nombre">Nombre</label>
+          <input type="text" id="nombre" />
+          <p>
+            {auth ? "El usuario: " + nombre +" ha sido logueado" : "No hay una sesion activa"}
+          </p>
+          {/* End pruebas */}
 
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          {numeros.map((es,index) => (
+            <li key={index}>{es}</li>
+          ))}
 
-      <section>
-        <Component msg="Hola soy un componente funcional expresado desde una prop"/>
-      </section>
-    </div>
+          
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          <section>
+            <Component msg="Hola soy un componente funcional expresado desde una prop"/>
+            <hr></hr>
+            <Propiedades/>
+          </section>
+        </header>
+      </div>
+    </section>
+
   );
 }
 
