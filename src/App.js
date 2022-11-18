@@ -1,8 +1,9 @@
 import logo from './logo.svg';
-import './App.css';
 import Component from './components/Componente';
 import Propiedades from './components/Propiedades';
-
+import Estado from "./components/Estado";
+import RenderizadoCondicional  from "./components/RenderizadoCondicional";
+import './App.css';
 function App() {
   let auth =false;
   let nombre = "Manuel";
@@ -52,6 +53,15 @@ function App() {
               componenteReact={<Component msg="Soy un componente pasado como prop"/>
             }
             />
+          </section>
+          <hr></hr>
+          <section>
+            <Estado/>
+          </section>
+          <hr></hr>
+
+          <section>
+            <RenderizadoCondicional/>
           </section>
         </header>
       </div>
