@@ -27,7 +27,7 @@ export default class RenderizadoCondicional extends Component{
         return(
             <div>
                 <h2>Renderizado Condicional</h2>
-                <div>{session ? <Login/> : <Logout/>}</div>
+                <div>{this.state.session ? <Login/> : <Logout/>}</div>
             </div>
         );
     }
