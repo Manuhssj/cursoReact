@@ -5,6 +5,7 @@ import Estado from "./components/Estado";
 import RenderizadoCondicional  from "./components/RenderizadoCondicional";
 import './App.css';
 import RenderizadoElementos from './components/RenderizadoElementos';
+import {EventosES6,EventosES7} from './components/Eventos';
 function App() {
   let auth =false;
   let nombre = "Manuel";
@@ -69,9 +70,18 @@ function App() {
           </section>
 
           <hr></hr>
-
           <section>
             <RenderizadoElementos/>
+          </section>
+
+          <hr></hr>
+          <section>
+            <EventosES6/>
+          </section>
+
+          <hr></hr>
+          <section>
+            <EventosES7/>
           </section>
           
           <hr></hr>
