@@ -6,6 +6,8 @@ import RenderizadoCondicional  from "./components/RenderizadoCondicional";
 import './App.css';
 import RenderizadoElementos from './components/RenderizadoElementos';
 import {EventosES6,EventosES7, MasSobreEventos} from './components/Eventos';
+import ComunicacionComponentes from './components/ComunicacionComponentes';
+
 function App() {
   let auth =false;
   let nombre = "Manuel";
@@ -55,41 +57,25 @@ function App() {
               componenteReact={<Component msg="Soy un componente pasado como prop"/>
             }
             />
+          
           </section>
-
-          <hr></hr>
+          <hr/>
 
           <section>
             <Estado/>
-          </section>
-
-          <hr></hr>
-
-          <section>
+            <hr/>
             <RenderizadoCondicional/>
-          </section>
-
-          <hr></hr>
-          <section>
+            <hr/>
             <RenderizadoElementos/>
-          </section>
-
-          <hr></hr>
-          <section>
+            <hr/>
             <EventosES6/>
-          </section>
-
-          <hr></hr>
-          <section>
+            <hr/>
             <EventosES7/>
-          </section>
-          
-          <hr></hr>
-          <section>
+            <hr/>
             <MasSobreEventos/>
+            <hr/>
+            <ComunicacionComponentes/>
           </section>
-          
-          <hr></hr>
         </header>
       </div>
     </section>
