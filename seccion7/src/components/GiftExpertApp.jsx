@@ -2,26 +2,36 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react';
 import { AddCategory } from './AddCategory';
+import { GifGrid } from './GifGrid';
 
 export function GiftExpertApp() {
 
   const [categories, setCategories] = useState(['One punch', 'Dragon Ball']);
 
-  const onAddCategorie = (input) => {
-    setCategories([...categories, input]);
+  const onAddCategorie = ( newCategory ) => {
+ 
+    if( categories.includes(newCategory) ) return;
+
+    setCategories( [newCategory, ...categories] )
 
   }
   return (
     <>
       <div className="text-center mt-5">
+        
         <h2>GiftExpertApp</h2>
-        <AddCategory setCategories={ setCategories }/>
-        <button className='btn btn-primary mt-2 mb-2 ' onClick={onAddCategorie}>Agregar</button>
+        
+        <AddCategory onNewCategory={ (value) => onAddCategorie(value) }/>
+        
+        <div className="mt-4">
+    
           { 
-          categories.map( category => {
-              return <li key={category}>{category}</li>
-            })
+            categories.map( ( category ) => (
+                <GifGrid key={ category } category={ category }/>
+            ))
+
           }
+        </div>
       </div>
       
     </>
