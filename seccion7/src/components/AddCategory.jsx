@@ -22,7 +22,7 @@ export const AddCategory = ({ onNewCategory }) => {
     return (
         <form onSubmit={ (event) => onSumbit(event) }>
             <input 
-                className="col-6"
+                className="col-8"
                 type="text"
                 placeholder="Buscar gifs..."
                 value={ inputValue }

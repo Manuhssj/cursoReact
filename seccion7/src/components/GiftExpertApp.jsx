@@ -6,21 +6,19 @@ import { GifGrid } from './GifGrid';
 
 export function GiftExpertApp() {
 
-  const [categories, setCategories] = useState(['hola']);
+  const [categories, setCategories] = useState(['One Punch']);
 
   const onAddCategorie = ( newCategory ) => {
  
     if( categories.includes(newCategory) ) return;
 
-    setCategories( [newCategory, ...categories] )
+    setCategories( [newCategory] )
 
   }
   return (
     <>
       <div className="text-center mt-5">
-        
-        <h2>GiftExpertApp</h2>
-        
+
         <AddCategory onNewCategory={ (value) => onAddCategorie(value) }/>
         
         <div className="mt-4">
