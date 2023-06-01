@@ -6,7 +6,7 @@ import { AddCategory,GifGrid } from './components/';
 
 export function GiftExpertApp() {
 
-  const [categories, setCategories] = useState(['One Punch']);
+  const [categories, setCategories] = useState(['Buscador de gif']);
 
   const onAddCategorie = ( newCategory ) => {
  
