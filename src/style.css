@@ -1,9 +1,11 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(230, 230, 230);
+    
 }
-  
-
+body{
+    background: rgb(87,84,131);
+    background: linear-gradient(87deg, rgba(87,84,131,1) 0%, rgba(93,88,140,1) 24%, rgba(112,110,136,1) 41%, rgba(149,149,163,1) 57%, rgba(252,252,252,1) 100%);
+}
 input {
     background-color: white;
     border-radius: 5px;
@@ -55,3 +57,41 @@ h3 {
 .card img {
     width: 100%;
 }
+
+/*** ESTILOS BOTÓN COMPRAR (DETALLE) ***/
+.ov-btn-slide-close {
+    background: #fff; /* color de fondo */
+    color: #000000; /* color de fuente */
+    border: 1px solid #ffffff; /* tamaño y color de borde */
+    padding: 13px 20px;
+    border-radius: 10px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-slide-close:before, .ov-btn-slide-close:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color: rgba(87,84,131,1); /* color de fondo hover */
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .ov-btn-slide-close:after {
+    left: 100%;
+  }
+  .ov-btn-slide-close:hover {
+    color: rgb(255, 255, 255); /* color de fuente hover */
+  }
+  .ov-btn-slide-close:hover:before {
+    left: 0;
+  }
+  .ov-btn-slide-close:hover:after {
+    left: 50%;
+  }

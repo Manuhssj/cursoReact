@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { GiftExpertApp } from './components/GiftExpertApp';
+import { GiftExpertApp } from './GiftExpertApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 

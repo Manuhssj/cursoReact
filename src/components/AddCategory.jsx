@@ -28,6 +28,7 @@ export const AddCategory = ({ onNewCategory }) => {
                 value={ inputValue }
                 onChange={ onInputChange }
             />
+            <button className="ov-btn-slide-close ms-1 mb-1" value={inputValue} onChange={onInputChange}>Search</button>
         </form>
   )
 }
