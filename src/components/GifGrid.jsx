@@ -8,9 +8,9 @@ export const GifGrid = ({ category }) => {
 
     return (
         <>
-            <div className='container'>                
+            {/* <div className='container'>                
                 <h3 className='text-center'> {category} </h3>
-            </div>
+            </div> */}
             
             <div className='card-grid'>
                 {

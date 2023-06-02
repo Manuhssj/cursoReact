@@ -6,7 +6,7 @@ import { AddCategory,GifGrid } from './components/';
 
 export function GiftExpertApp() {
 
-  const [categories, setCategories] = useState(['Buscador de gif']);
+  const [categories, setCategories] = useState(['Gifs']);
 
   const onAddCategorie = ( newCategory ) => {
  
