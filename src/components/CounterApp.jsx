@@ -14,15 +14,15 @@ export const CounterApp = () => {
   return (
     <>
         <div className="container">
-            <h1 className="text-dark">
+            <h3 className="text-dark">
                 Counter: {counter1}
-            </h1>
-            <h1 className="text-dark">
+            </h3>
+            <h3 className="text-dark">
                 Counter: {counter2}
-            </h1>
-            <h1 className="text-dark">
+            </h3>
+            <h3 className="text-dark">
                 Counter: {counter3}
-            </h1>
+            </h3>
         </div>
         <div className='container text-center'>
             <hr/>
