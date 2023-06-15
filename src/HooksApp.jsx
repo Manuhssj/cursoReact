@@ -2,6 +2,7 @@ import React from 'react'
 import { CounterApp } from './components/CounterApp'
 import { CounterWithCustomHook } from './components/CounterWithCustomHook'
 import { SimpleForm } from './hooks/useEffect/SimpleForm'
+import { FormWithCustomHook } from './hooks/useEffect/FormWithCustomHook'
 
 export const HooksApp = () => {
   return (
@@ -10,6 +11,7 @@ export const HooksApp = () => {
       <CounterApp/>
       <CounterWithCustomHook/>
       <SimpleForm/>
+      <FormWithCustomHook/>
     </div>
   )
 }

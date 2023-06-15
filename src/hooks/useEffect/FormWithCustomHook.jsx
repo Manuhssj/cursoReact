@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Message } from "./Message";
 
-export const SimpleForm = () => {
+export const FormWithCustomHook = () => {
   const [formState, setFormState] = useState({
     username: "",
     email: "",
+    password: ""
   });
 
-  const { username, email } = formState;
+  const { username, email, password } = formState;
 
   const onInputChange = ({target}) =>{
+
     const {name, value} = target;
-    // console.log({name, value});
+    // console.log({name, value, password});
 
     setFormState({
         ...formState,
@@ -24,18 +26,18 @@ export const SimpleForm = () => {
   //   console.log('UseEffect Called!');
   // },[]);
   
-  // useEffect( () => {
-  //   console.log('username changed!');
-  // },[ username ]);
+  useEffect( () => {
+    console.log('username changed!');
+  },[ username ]);
   
-  // useEffect( () => {
-  //   console.log('email changed!');
-  // },[ email ]);  
+  useEffect( () => {
+    console.log('email changed!');
+  },[ email ]);  
 
   return (
     <>
       <hr />
-      <h2 className="text-center">SimpleForm</h2>
+      <h2 className="text-center">Formulario con custom Hook</h2>
 
       <div className="row">
         <label className="form-label mt-2">
@@ -64,11 +66,18 @@ export const SimpleForm = () => {
             value={email}
             onChange={onInputChange}
           />
+          <label className="form-label mt-2">
+          Password
+        </label>
+          <input
+            type="password"
+            placeholder="Ingresa tu contraseña"
+            className="form-control"
+            name="password"
+            value={password}
+            onChange={onInputChange}
+          />
           
-          {
-            ( username === 'Manuhssj' ) && <Message/> 
-          }
-
 
         </div>
       </div>
