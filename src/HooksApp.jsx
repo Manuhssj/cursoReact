@@ -1,8 +1,8 @@
 import React from 'react'
-import { CounterApp } from './components/CounterApp'
-import { CounterWithCustomHook } from './components/CounterWithCustomHook'
-import { SimpleForm } from './hooks/useEffect/SimpleForm'
-import { FormWithCustomHook } from './hooks/useEffect/FormWithCustomHook'
+import { CounterApp } from './01-useState/CounterApp'
+import { SimpleForm } from './02-useEffect/SimpleForm'
+import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook'
+import { CounterWithCustomHook } from '../src/01-useState/CounterWithCustomHook';
 
 export const HooksApp = () => {
   return (

@@ -1,30 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Message } from "./Message";
+import { useForm } from "../hooks/index.js";
 
 export const FormWithCustomHook = () => {
-  const [formState, setFormState] = useState({
-    username: "",
-    email: "",
-    password: ""
+  
+  const {formState, onInputChange, username, email, password,onResetForm } = useForm({
+    username: '',
+    email: '',
+    password: ''
   });
-
-  const { username, email, password } = formState;
-
-  const onInputChange = ({target}) =>{
-
-    const {name, value} = target;
-    // console.log({name, value, password});
-
-    setFormState({
-        ...formState,
-        [ name ]: value
-    });
-    
-  }
-
-  // useEffect( () => {
-  //   console.log('UseEffect Called!');
-  // },[]);
   
   useEffect( () => {
     console.log('username changed!');
@@ -80,6 +63,7 @@ export const FormWithCustomHook = () => {
           
 
         </div>
+        <button onClick={onResetForm} className="btn btn-danger mt-2 col-sm-2 col-lg-12 mx-2">Reset</button>
       </div>
 
       <hr />

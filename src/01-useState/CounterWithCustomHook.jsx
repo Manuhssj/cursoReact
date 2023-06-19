@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { useCounter } from '../hooks/useState/useCounter'
+import { useCounter } from '../hooks'
 
 export const CounterWithCustomHook = () => {
 
   const { counter, increment, decrement, reset } = useCounter(0)
-
   return (
     <>
         <hr/>
