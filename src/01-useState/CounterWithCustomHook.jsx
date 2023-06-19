@@ -14,7 +14,7 @@ export const CounterWithCustomHook = () => {
         </h3>
       
       
-        <hr/>
+        
         <div className="btn-group">
           <button 
             className="btn btn-primary" 
