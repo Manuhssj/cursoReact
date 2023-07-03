@@ -15,7 +15,7 @@ export const MultipleCustomHooks = () => {
   return (
     <>
       <h1 className='text-center'>Rick And Morty Characters</h1>
-      <hr/>
+ 
 
       {
 

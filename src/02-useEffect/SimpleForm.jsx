@@ -73,7 +73,6 @@ export const SimpleForm = () => {
         </div>
       </div>
 
-      <hr />
     </>
   );
 };

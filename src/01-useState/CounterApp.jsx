@@ -25,7 +25,6 @@ export const CounterApp = () => {
             </h3>
         </div>
         <div className='container text-center'>
-            <hr/>
             <div className="btn-group">
                 <button 
                     className="btn btn-primary" 
