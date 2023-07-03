@@ -1,15 +1,16 @@
+import { CardChar, LoadingChar } from './';
+import { useCounter,useFetch } from '../hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
-import { useCounter } from '../hooks/useCounter';
-import { useFetch } from '../hooks/useFetch'
+
 
 export const MultipleCustomHooks = () => {
 
   const {counter, increment, decrement, reset} = useCounter(1)
   const { data, isLoading, hasError } = useFetch(`https://rickandmortyapi.com/api/character/${counter}`)
 
-
+  const { image, name, origin: { name: originName } = {}, location: { name: locationName } = {} } = data || {};
   
   return (
     <>
@@ -17,26 +18,14 @@ export const MultipleCustomHooks = () => {
       <hr/>
 
       {
-        isLoading
-          ?(
-            <div className='alert alert-info text-center'>
-              Loading...
-            </div>
-          )
-          :(data &&(
-            <div className="card col-4 mx-auto">
-              <img src={data.image} alt="" className="img-fluid" />
-              <div className="card-body">
-                <h5 className="card-title text-center">{data.name}</h5>
-                <p className="card-text">Origin: {data.origin.name}</p>
-                <p className="card-text">Loaction: {data.location.name}</p>
-              </div>
-            </div>
-          )
-            
-          )
+
+        isLoading ? (
+          <LoadingChar/>
+        ) : (
+           <CardChar image={image} name={name} origin={originName} location={originName}/>
+        )
           
-        }
+      }
         <button 
           className="btn btn-primary mt-5 me-3"
           onClick={() => decrement(1)}
