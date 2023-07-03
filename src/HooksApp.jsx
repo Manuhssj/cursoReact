@@ -8,7 +8,7 @@ import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks';
 export const HooksApp = () => {
   return (
     <div className="container justify-content-center mb-3">
-      <h1 className="text-dark text-center">HooksApp</h1>
+      {/* <h1 className="text-dark text-center">HooksApp</h1> */}
       {/* <CounterApp/> */}
       {/* <CounterWithCustomHook/> */}
       {/* <SimpleForm/> */}

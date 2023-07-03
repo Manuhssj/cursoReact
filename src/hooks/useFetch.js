@@ -14,6 +14,7 @@ export const useFetch = (url) => {
     });
 
     try {
+      
       const resp = await fetch(url);
       if (!resp.ok) {
         throw new Error(`HTTP error! Status: ${resp.status}`);
