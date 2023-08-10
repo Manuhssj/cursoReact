@@ -8,7 +8,8 @@ import React from 'react'
 // import { Memorize } from './06-memos/Memorize';
 // import { MemoHook } from './06-memos/MemoHook';
 // import { CallBackHook } from './06-memos/CallBackHook';
-import { Padre } from './07-tareaMemo/Padre';
+// import { Padre } from './07-tareaMemo/Padre';
+import './08-useReducer/intro-reducer';
 
 export const HooksApp = () => {
   return (
@@ -23,7 +24,8 @@ export const HooksApp = () => {
       {/* <Memorize/> */}
       {/* <MemoHook/> */}
       {/* <CallBackHook/> */}
-      <Padre/>
+      {/* <Padre/> */}
+      
     </div>
   )
 }
